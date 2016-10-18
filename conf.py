@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'SIM v5'
+project = 'SIM v6.1'
 copyright = str(datetime.date.today().year) + ', Silver Monkey GmbH'
 author = 'Silver Monkey'
 
