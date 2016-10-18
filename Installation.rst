@@ -83,8 +83,8 @@ SIM SQL DB Installation
 
 #. Create database ``SIM_v61_R001``
 #. Grant SilverMonkey Service Account (``sim-svc-sql``) "db_owner" rights for the corresponding database
-#. Import .SQL file from installation media into SQL Management Studio
-#. Make sure ``using`` command aims to the correct database created above and execute script
+#. Import .SQL file from installation media (.\\Database) into SQL Management Studio
+#. Make sure the **using** command aims to the correct database created above and execute script
 
 
 
@@ -112,14 +112,56 @@ Create IIS App Pool
 Create SilverMonkey folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Create C:\SilverMonkey
+#. Create C:\\SilverMonkey
 #. Copy files from installation media
-#. Change connection string
+#. Change connection string in file **C:\\SilverMonkey\\v61\\Config.xml** (XPath: //Configuration/DBConnection)
 
 
 Create IIS Application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Go to IIS Manager, DefaultWebSite (or other Website, make sure to disable Impersonation)
-#. Add application, choose SIM AppPool (created above) and target to C:\SilverMonkey\Web\R001
+#. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\Web\\R001
 
+
+Install Windows Service
+-------------------------
+
+#. Go to C:\\SilverMonkey\\v61\\WinService
+#. Execute **Install.cmd** with administrative rights
+#. Open services.msc and make sure, the Windows Service **SIMv61Service** is installed
+
+
+Test Installation
+----------------------------------------
+
+..note:: For testing API download Postman: https://www.getpostman.com/ 
+
+Test Query
+^^^^^^^^^^^^^^^^^^
+
+#. Start Postman
+#. Select **GET** as option
+#. Enter URL: http://SERVERNAME/APP_NAME/api/query?uniquename=TestQuery
+#. Hit execute
+
+The following result should appear:
+
+.. image:: _static/install/APITestQuery.png
+
+..note:: For testing API download Postman: https://www.getpostman.com/ 
+
+Test Queue
+^^^^^^^^^^^^^^^^^^
+
+#. Start Postman
+#. Select **POST** as option
+#. Enter URL: http://SERVERNAME/APP_NAME/api/Queue
+#. Add following code to body: {"definition": "<Definition><Plugin>TestPlugin</Plugin><Data><ExampleString>HelloWorld</ExampleString></Data></Definition>"}
+#. Hit execute
+
+The following result should appear:
+
+.. image:: _static/install/APITestQueue.png
+
+.. image:: _static/install/APITestQueuePluginResult.png
