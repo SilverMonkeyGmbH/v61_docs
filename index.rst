@@ -7,7 +7,7 @@ Welcome
 ------------
 
 This document is meant to be a source for all information regarding the 
-administration and installation of Silver Monkey v5 Modules.
+administration and installation of the Silver Monkey v6.1 engine.
 
 Contents:
 
