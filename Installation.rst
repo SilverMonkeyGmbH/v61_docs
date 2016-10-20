@@ -16,10 +16,13 @@ IIS Features
 ----------------------------
 Execute the following command to enable IIS features on the application server:
 
-  .. literalinclude:: /_static/Install.cmd
+  .. literalinclude:: /_static/Install-IIS-Features.cmd
     :language: batch
 
-See :download:`Download Script </_static/Install.cmd>`.
+  .. code-block:: batch
+  CMD.EXE /C DISM.EXE /enable-feature /all /online /featureName:IIS-WebServerRole /featureName:IIS-WebServer /featureName:IIS-CommonHttpFeatures /featureName:IIS-StaticContent /featureName:IIS-DefaultDocument /featureName:IIS-DirectoryBrowsing /featureName:IIS-HttpErrors /featureName:IIS-HttpRedirect /featureName:IIS-ApplicationDevelopment /featureName:IIS-ASPNET /featureName:IIS-NetFxExtensibility /featureName:IIS-ASPNET45 /featureName:IIS-NetFxExtensibility45 /featureName:IIS-ASP /featureName:IIS-CGI /featureName:IIS-ISAPIExtensions /featureName:IIS-ISAPIFilter /featureName:IIS-ServerSideIncludes /featureName:IIS-HealthAndDiagnostics /featureName:IIS-HttpLogging /featureName:IIS-LoggingLibraries /featureName:IIS-RequestMonitor /featureName:IIS-HttpTracing /featureName:IIS-CustomLogging /featureName:IIS-ODBCLogging /featureName:IIS-Security /featureName:IIS-BasicAuthentication /featureName:IIS-WindowsAuthentication /featureName:IIS-DigestAuthentication /featureName:IIS-ClientCertificateMappingAuthentication /featureName:IIS-IISCertificateMappingAuthentication /featureName:IIS-URLAuthorization /featureName:IIS-RequestFiltering /featureName:IIS-IPSecurity /featureName:IIS-Performance /featureName:IIS-HttpCompressionStatic /featureName:IIS-HttpCompressionDynamic /featureName:IIS-WebDAV /featureName:IIS-WebServerManagementTools /featureName:IIS-ManagementScriptingTools /featureName:IIS-ManagementService /featureName:IIS-IIS6ManagementCompatibility /featureName:IIS-Metabase /featureName:IIS-WMICompatibility /featureName:IIS-LegacyScripts /featureName:IIS-FTPServer /featureName:IIS-FTPSvc /featureName:IIS-FTPExtensibility /featureName:NetFx4Extended-ASPNET45 /featureName:IIS-ApplicationInit /featureName:IIS-WebSockets /featureName:IIS-CertProvider /featureName:IIS-ManagementConsole /featureName:IIS-LegacySnapIn /norestart
+
+For easy deploymnet: :download:`Download the script </_static/Install-IIS-Features.zip>`.
 
 
 Microsoft SQL Server
@@ -43,15 +46,19 @@ Name the instance SIM or choose another name:
 
 .. image:: _static/install/SQLServerInstallation_02.png
 
-Configurate the server as follows:
+Configure the server as follows:
 
 .. image:: _static/install/SQLServerInstallation_03.png
 
+Customize the Database Engine
+
+.. image:: _static/install/SQLServerInstallation_04-1.png 
+
 Choose the Database Engine called 'SQL_Latin_General_CP1_CI_AS': 
 
-.. image:: _static/install/SQLServerInstallation_04.png
+.. image:: _static/install/SQLServerInstallation_04-2.png
 
-Select the 'mixed mode'-authentification and add your SQL service account (``sim-svc-sql``) as SQL Server administrator:
+Select the 'mixed mode'-authentification and add your AD service account for SQL (``sim-svc-sql``) as SQL Server administrator:
 
 .. image:: _static/install/SQLServerInstallation_05.png
 
@@ -83,31 +90,32 @@ SIM SQL DB Installation
 
 #. Create database ``SIM_v61_R001``
 #. Grant SilverMonkey Service Account (``sim-svc-sql``) "db_owner" rights for the corresponding database
+
+.. image:: _static/install/SQLUserMapping.png
+
 #. Import .SQL file from installation media (.\\Database) into SQL Management Studio
-#. Make sure the **using** command aims to the correct database created above and execute script
+#. Make sure the **USE** command aims to the correct database created above and execute script
 
 
 
-Install IIS
+Configure IIS
 -------------
-
-Install the .NET Core Windows Server Hosting bundle
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-#. Install the `.NET Core Windows Server Hosting <https://go.microsoft.com/fwlink/?LinkID=827547>`__ bundle on the server. The bundle will install the .NET Core Runtime, .NET Core Library, and the ASP.NET Core Module. The module creates the reverse-proxy between IIS and the Kestrel server.
-#. Restart the server or execute **net stop was /y** followed by **net start w3svc** from the command-line to pickup changes to the system PATH.
 
 
 Create IIS App Pool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Go to IIS Manager and create the following AppPool:
+1. Go to IIS Manager and create an AppPool with .NET CLR version set to ``No Managed Code`` :
 
-.. image:: _static/install/AppPool.png
+.. image:: _static/install/IISAppPool.png
 
-2. Make sure to set up a specific user account for the AppPool which has 
+2. Go into the Advanced Settings of this AppPool and change the ``Process Model - Identity`` : 
 
-.. image:: _static/install/AppPoolAdvancedSettings.png
+.. image:: _static/install/IISAppPoolAdvancedSettings-1.png
+
+3. Make sure to use a custom user account, i.e. the Service Account (``sim-svc-sql``)
+
+.. image:: _static/install/IISAppPoolAdvancedSettings-2.png
 
 Create SilverMonkey folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -121,7 +129,9 @@ Create IIS Application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Go to IIS Manager, DefaultWebSite (or other Website, make sure to disable Impersonation)
-#. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\Web\\R001
+#. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\Web\\R001 (an alias can be set optionally)
+
+.. image:: _static/install/IISApplicationCreate.png
 
 
 Install Windows Service
@@ -129,13 +139,19 @@ Install Windows Service
 
 #. Go to C:\\SilverMonkey\\v61\\WinService
 #. Execute **Install.cmd** with administrative rights
-#. Open services.msc and make sure, the Windows Service **SIMv61Service** is installed
+#. Open services.msc and make sure that the Windows Service **SIMv61Service** is installed
+
+.. image:: _static/install/SimWinService_01.png
+
+#. Go into the properties of this service and change the Log On Account to the Service Account
+
+.. image:: _static/install/SimWinService_02.png
 
 
 Test Installation
 ----------------------------------------
 
-..note:: For testing API download Postman: https://www.getpostman.com/ 
+.. note:: For testing API download Postman: https://www.getpostman.com/ 
 
 Test Query
 ^^^^^^^^^^^^^^^^^^
@@ -149,15 +165,17 @@ The following result should appear:
 
 .. image:: _static/install/APITestQuery.png
 
-..note:: For testing API download Postman: https://www.getpostman.com/ 
-
 Test Queue
 ^^^^^^^^^^^^^^^^^^
 
 #. Start Postman
 #. Select **POST** as option
 #. Enter URL: http://SERVERNAME/APP_NAME/api/Queue
-#. Add following code to body: {"definition": "<Definition><Plugin>TestPlugin</Plugin><Data><ExampleString>HelloWorld</ExampleString></Data></Definition>"}
+#. Add following code to body:
+
+.. code-block:: json
+ {"definition": "<Definition><Plugin>TestPlugin</Plugin><Data><ExampleString>HelloWorld</ExampleString></Data></Definition>"}
+ 
 #. Hit execute
 
 The following result should appear:
