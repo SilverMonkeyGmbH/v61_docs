@@ -7,6 +7,7 @@ Application Server (IIS)
 -	Internet Information Server
 -	Microsoft .NET Core 1.0
 - Microsoft .NET Framework 4.6.1
+  
   - https://support.microsoft.com/en-us/kb/3102436
   - With Windows Server 2012, the installation requires Windows Update KB2919355, which may be included in your update stream
   - If not already included, please install manually as described here: https://support.microsoft.com/en-us/kb/2919355
