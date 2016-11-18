@@ -8,7 +8,9 @@ Manual for plugin "ConfigMgr"
 
 .. warning:: This article is under construction! Please DO NOT use any of the instructions below, yet! You may cause damage to your system. This article will be finished soon.
 
+General assumptions:
 
+#. Actions with ``Workflow`` prefix combine multiple actions. Workflow actions exist to standardize frequent used action combos.
 
 ************************************************************************************
 Connection
@@ -36,16 +38,28 @@ Example:
 ************************************************************************************
 Computers
 ************************************************************************************
+Everthing concering computer management is stored in the ``Computers`` namespace.
 
 
+==============================
+Action WorkflowCreate
+==============================
 
-===============
-query
-===============
+This worklow combines the following actions:
 
-Getting information from the web service.
+#. Check if computer exists (Delete if ``ComputerParameters.ComputerOverwriteExistingObject`` is true)
+#. Create computer
+#. Add variables to computer object
+#. Add collection memberships to computer
 
+Example:
 
+.. literalinclude:: _static/WorkflowCreate.ps1
+  :language: powershell
+
+Excepted output:
+
+.. literalinclude:: _static/WorkflowCreate.log
 
 ==============================
 queue
