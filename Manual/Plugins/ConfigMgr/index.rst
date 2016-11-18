@@ -10,8 +10,6 @@ Manual for plugin "ConfigMgr"
 
 
 
-.. tip:: Go to :doc:`/KnowledgeBase/KB00002_WebService-Test-Tool/index` to get help connecting to the web service. 
-
 ************************************************************************************
 Connection
 ************************************************************************************
@@ -24,6 +22,7 @@ a) Windows Auth: To use windows (or integrated authentication) leave the corresp
 Example:
 
 .. literalinclude:: _static/Connection.ps1
+  :language: powershell
 
 b) Clear text: Currently, the only alternate option is clear text password authentication. 
 

@@ -4,13 +4,13 @@ Manual
 Modules:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Webservice/index
 
 Plugins:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Plugins/ConfigMgr/index
