@@ -17,23 +17,23 @@ Connection
 ************************************************************************************
 In the computers namespace all connection relevant parameters are stored.
 
-Authentication Methods
+Authentication Methods (or integrated authentication)
 
-**a) Windows Auth: To use windows (or integrated authentication) leave the corresponding UserName attributes ``WMIUserName`` and ``SQLUserName`` empty.**
-
-Example:
-
-.. literalinclude:: _static/ConnectionWinAuth.ps1
-  :language: powershell
-
-**b) Clear text: Currently, the only alternate option is clear text password authentication.**
+a) Windows Auth: Do not set the corresponding credentials attributes *UserName, *UserPassword.
 
 Example:
 
-.. literalinclude:: _static/ConnectionClearText.ps1
-  :language: powershell
+  .. literalinclude:: _static/ConnectionWinAuth.ps1
+    :language: powershell
 
-**c) Powershell Secure String: Will be supported in a later version.**
+b) Clear text: Set the corresponding credentials attributes *UserName, *UserPassword.
+
+Example:
+
+  .. literalinclude:: _static/ConnectionClearText.ps1
+    :language: powershell
+
+c) Powershell Secure String: Will be supported in a later version.
 
 ************************************************************************************
 Computers
