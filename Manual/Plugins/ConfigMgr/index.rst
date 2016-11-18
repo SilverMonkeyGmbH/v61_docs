@@ -61,8 +61,3 @@ Excepted output:
 
 .. literalinclude:: _static/WorkflowCreate.log
 
-==============================
-queue
-==============================
-
-Adding a queue element for executing a powershell addon script
