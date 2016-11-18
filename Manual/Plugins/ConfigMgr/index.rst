@@ -52,7 +52,7 @@ This worklow combines the following actions:
 #. Add variables to computer object
 #. Add collection memberships to computer
 
-Example:
+Example (complete with connection):
 
 .. literalinclude:: _static/WorkflowCreate.ps1
   :language: powershell
