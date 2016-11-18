@@ -1,10 +1,16 @@
 Manual
 ===============================
 
-Contents:
+Modules:
 
 .. toctree::
    :maxdepth: 2
 
    Webservice/index
-   Plugins
+
+Plugins:
+
+.. toctree::
+   :maxdepth: 2
+
+   Plugins/ConfigMgr/index
