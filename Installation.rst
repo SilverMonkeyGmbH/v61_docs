@@ -16,8 +16,8 @@ IIS Features
 ----------------------------
 Execute the following command to enable IIS features on the application server:
 
-  .. literalinclude:: /_static/Install-IIS-Features.cmd
-    :language: batch
+.. literalinclude:: /_static/Install-IIS-Features.cmd
+  :language: batch
 
 For easy deploymnet: :download:`Download the script </_static/Install-IIS-Features.zip>`.
 
@@ -85,13 +85,13 @@ Afterwards, navigate to the SQL Server Services and restart the 'SQL Server ([Da
 SIM SQL DB Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Create database ``SIM_v61_R001``
-#. Grant SilverMonkey Service Account (``sim-svc-sql``) "db_owner" rights for the corresponding database
+1. Create database ``SIM_v61_R001``
+2. Grant SilverMonkey Service Account (``sim-svc-sql``) "db_owner" rights for the corresponding database
 
 .. image:: _static/install/SQLUserMapping.png
 
-#. Import .SQL file from installation media (.\\Database) into SQL Management Studio
-#. Make sure the **USE** command aims to the correct database created above and execute script
+3. Import .SQL file from installation media (.\\Database) into SQL Management Studio
+4. Make sure the **USE** command aims to the correct database created above and execute script
 
 
 
@@ -125,11 +125,11 @@ Create SilverMonkey folder
 Create IIS Application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Go to IIS Manager, DefaultWebSite (or other Website, make sure to disable Impersonation). Impersonation is not supported for v61 and must not be inherited from Default Website to IIS application.
+1. Go to IIS Manager, DefaultWebSite (or other Website, make sure to disable Impersonation). Impersonation is not supported for v61 and must not be inherited from Default Website to IIS application.
 
 .. image:: _static/install/DefaultWebsiteAuth.png
 
-#. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\Web\\R001. 
+2. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\Web\\R001. 
 
 .. hint:: The alias defines the later URL: http://HOSTNAME/ALIAS
 
@@ -139,13 +139,13 @@ Create IIS Application
 Install Windows Service
 -------------------------
 
-#. Go to C:\\SilverMonkey\\v61\\WinService
-#. Execute **Install.cmd** with administrative rights
-#. Open services.msc and make sure that the Windows Service **SIMv61Service** is installed
+1. Go to C:\\SilverMonkey\\v61\\WinService
+2. Execute **Install.cmd** with administrative rights
+3. Open services.msc and make sure that the Windows Service **SIMv61Service** is installed
 
 .. image:: _static/install/SimWinService_01.png
 
-#. Go into the properties of this service and change the Log On Account to the Service Account. This service account is used for the execution of every plugin run by the web service.
+4. Go into the properties of this service and change the Log On Account to the Service Account. This service account is used for the execution of every plugin run by the web service.
 
 .. image:: _static/install/SimWinService_02.png
 
@@ -179,7 +179,7 @@ Test Queue
 
     {"definition": "<Definition><Plugin>TestPlugin</Plugin><Data><ExampleString>HelloWorld</ExampleString></Data></Definition>"}
 
-#. Hit execute
+5. Hit execute
 
 The following result should appear:
 
