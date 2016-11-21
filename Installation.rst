@@ -129,7 +129,9 @@ Create IIS Application
 
 .. image:: _static/install/DefaultWebsiteAuth.png
 
-#. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\Web\\R001 (an alias can be set optionally)
+#. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\Web\\R001. 
+
+.. hint:: The alias defines the later URL: http://HOSTNAME/ALIAS
 
 .. image:: _static/install/IISApplicationCreate.png
 
