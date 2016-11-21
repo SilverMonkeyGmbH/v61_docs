@@ -110,7 +110,7 @@ Create IIS App Pool
 
 .. image:: _static/install/IISAppPoolAdvancedSettings-1.png
 
-3. Make sure to use a custom user account, i.e. the Service Account (``sim-svc-sql``) which has db_owner rights in the SIM v61 SQL database. This account is only used for accessing the own SQL database.
+3. Make sure to use a custom **Active Directory** user account, i.e. the  Service Account (``sim-svc-sql``) which has db_owner rights in the SIM v61 SQL database. This account is only used for accessing the own SQL database. Syntax: ``DOMAIN\UserName``.
 
 .. image:: _static/install/IISAppPoolAdvancedSettings-2.png
 
