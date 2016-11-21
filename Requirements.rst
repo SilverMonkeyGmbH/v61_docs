@@ -22,7 +22,7 @@ Install the .NET Core Windows Server Hosting bundle
 
 Database Server (SQL)
 ----------------------------
--	Microsoft SQL Server 2008 R2 or higher 
+-	Microsoft SQL Server 2012 or higher 
 -	Or Microsoft SQL Server Express with Advanced Services
 
   -	2012: http://www.microsoft.com/en-us/download/details.aspx?id=29062 (ENU\x86\SQLEXPRADV_x86_ENU.exe)
