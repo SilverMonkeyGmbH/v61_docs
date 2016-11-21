@@ -39,3 +39,14 @@ queue
 ==============================
 
 Adding a queue element for executing a powershell addon script
+
+
+---------------------------------------
+Creating Queue element via powershell
+---------------------------------------
+
+.. literalinclude:: _static/CreateQueueElement.ps1
+  :language: powershell
+
+.. code-block:: powershell
+  .\CreateQueueElement.ps1 -definition "<Definition><Plugin>PLUGINNAME</Plugin><Data><Parameter1>Value</Parameter1></Data></Definition>"  -url "http://HOSTNAME/AppName" 

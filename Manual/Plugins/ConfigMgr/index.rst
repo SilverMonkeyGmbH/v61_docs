@@ -11,6 +11,7 @@ Manual for plugin "ConfigMgr"
 General assumptions:
 
 #. Actions with ``Workflow`` prefix combine multiple actions. Workflow actions exist to standardize frequent used action combos.
+#. Every action
 
 ************************************************************************************
 Connection
@@ -57,7 +58,7 @@ Example (complete with connection):
 .. literalinclude:: _static/WorkflowCreate.ps1
   :language: powershell
 
-Excepted output:
+Expected output:
 
 .. literalinclude:: _static/WorkflowCreate.log
 
