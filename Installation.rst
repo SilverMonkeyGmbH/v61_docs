@@ -110,7 +110,7 @@ Create IIS App Pool
 
 .. image:: _static/install/IISAppPoolAdvancedSettings-1.png
 
-3. Make sure to use a custom user account, i.e. the Service Account (``sim-svc-sql``)
+3. Make sure to use a custom user account, i.e. the Service Account (``sim-svc-sql``) which has db_owner rights in the SIM v61 SQL database. This account is only used for accessing the own SQL database.
 
 .. image:: _static/install/IISAppPoolAdvancedSettings-2.png
 
@@ -140,7 +140,7 @@ Install Windows Service
 
 .. image:: _static/install/SimWinService_01.png
 
-#. Go into the properties of this service and change the Log On Account to the Service Account
+#. Go into the properties of this service and change the Log On Account to the Service Account. This service account is used for the execution of every plugin run by the web service.
 
 .. image:: _static/install/SimWinService_02.png
 
