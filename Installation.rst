@@ -125,7 +125,10 @@ Create SilverMonkey folder
 Create IIS Application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Go to IIS Manager, DefaultWebSite (or other Website, make sure to disable Impersonation)
+#. Go to IIS Manager, DefaultWebSite (or other Website, make sure to disable Impersonation). Impersonation is not supported for v61 and must not be inherited from Default Website to IIS application.
+
+.. image:: _static/install/DefaultWebsiteAuth.png
+
 #. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\Web\\R001 (an alias can be set optionally)
 
 .. image:: _static/install/IISApplicationCreate.png
