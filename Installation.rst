@@ -154,7 +154,7 @@ Install Windows Service
 Test Installation
 ----------------------------------------
 
-.. note:: For testing API download Postman: https://www.getpostman.com/ 
+.. note:: For testing API download Postman: https://www.getpostman.com/apps
 
 Test Query
 ^^^^^^^^^^^^^^^^^^
