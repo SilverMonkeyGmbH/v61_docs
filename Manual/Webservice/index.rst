@@ -62,10 +62,15 @@ For creating plugins there are several rules:
 #. Every plugin must consist of a main function (with specific parameters) which will be executed by the wrapper.ps1
 #. Every plugin must return a specific class, which will be created by ``GenerateResult``
 
-For development the wrapper behaviour can be simulated by commenting out the function part:
+.. literalinclude:: _static/PluginTemplate.ps1
+  :language: powershell
+
+For development the wrapper behaviour can be simulated by commenting out the function part, and adding the XML string directly. Once the Powershell ISE run the XML variable declaration, the XML schema is avaiable through code completion:
 
 .. image:: _static/CreatePlugin1.png
 
+.. literalinclude:: _static/CreatePlugin1.ps1
+  :language: powershell
 
 ************************************************************************************
 Query
