@@ -28,7 +28,7 @@ Database Server (SQL)
   -	2012: http://www.microsoft.com/en-us/download/details.aspx?id=29062 (ENU\x86\SQLEXPRADV_x86_ENU.exe)
   -	2014: https://www.microsoft.com/en-US/download/details.aspx?id=42299  
 
-..note:: Make sure to download "ADV" package: 
+.. important:: Make sure to download "ADV" package: 
 .. image:: _static/install/SQLServerDownload.png
 
 Server Hardware Requirements (IIS+SQL)
