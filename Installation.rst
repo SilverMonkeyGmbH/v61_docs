@@ -159,6 +159,8 @@ Test Installation
 Test Query
 ^^^^^^^^^^^^^^^^^^
 
+.. important:: Try restarting the IIS Application/AppPool if you dont get the expected results!
+
 #. Start Postman
 #. Select **GET** as option
 #. Enter URL: http://SERVERNAME/APP_NAME/api/query?uniquename=TestQuery
@@ -170,6 +172,8 @@ The following result should appear:
 
 Test Queue
 ^^^^^^^^^^^^^^^^^^
+
+.. important:: Try restarting the IIS Application/AppPool if you dont get the expected results!
 
 #. Start Postman
 #. Select **POST** as option
