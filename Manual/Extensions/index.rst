@@ -1,7 +1,7 @@
-Plugins
+Extensions
 ===============================
 
-Plugins for Silver Monkey v61 are .Net DLL based features extensions which can be imported in Powershell scripts.
+Extensions for Silver Monkey v61 are .Net DLL based feature sets which can be imported in Powershell scripts.
 
 Contents:
 
@@ -20,5 +20,5 @@ General information
 Results
 ==============================
 
-All plugin actions return the specific class ``Base.Result``.
+All extension actions return the specific class ``Base.Result``.
    

@@ -13,4 +13,4 @@ Plugins:
 .. toctree::
    :maxdepth: 0
 
-   Plugins/ConfigMgr/index
+   -Plugins/ConfigMgr/index
