@@ -6,6 +6,14 @@ Application Server (IIS)
 -	Microsoft Windows Server 2012 or higher
 -	Internet Information Server
 -	Microsoft .NET Core 1.0
+
+To Check if .Net Core 1.0 is installed, run the following cmd command and check the output.
+
+.. literalinclude:: /_static/Test_dotnet_Core1.0.1.cmd
+  :language: batch
+
+.. image:: _static/install/Test_dotnet_Core1.0.1.png
+
 - Microsoft .NET Framework 4.6.1
   
   - https://support.microsoft.com/en-us/kb/3102436
