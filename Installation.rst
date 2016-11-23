@@ -190,4 +190,7 @@ The following result should appear:
 
 .. image:: _static/install/APITestQueue.png
 
-.. image:: _static/install/APITestQueuePluginResult.png
+
+.. note:: For testing Queue use the Test Plugin and Check in C:\Programmdata for the testfile
+
+.. image:: _static/install/APITestQueuePluginResult1.png
