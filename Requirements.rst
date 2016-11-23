@@ -9,7 +9,7 @@ Application Server (IIS)
 
 To Check if .Net Core 1.0 is installed, run the following cmd command and check the output.
 
-.. literalinclude:: /_static/Test_dotnet_Core1.0.1.cmd
+.. literalinclude:: /_static/install/Test-dotnet_Core1.0.1.cmd
   :language: batch
 
 .. image:: _static/install/Test_dotnet_Core1.0.1.png
