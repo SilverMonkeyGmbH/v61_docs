@@ -154,10 +154,12 @@ Install Windows Service
 Test Installation
 ----------------------------------------
 
-.. note:: For testing API download Postman: https://www.getpostman.com/ 
+.. note:: For testing API download&install Postman: https://www.getpostman.com/apps
 
 Test Query
 ^^^^^^^^^^^^^^^^^^
+
+.. important:: Try restarting the IIS Application/AppPool if you dont get the expected results!
 
 #. Start Postman
 #. Select **GET** as option
@@ -170,6 +172,8 @@ The following result should appear:
 
 Test Queue
 ^^^^^^^^^^^^^^^^^^
+
+.. important:: Try restarting the IIS Application/AppPool if you dont get the expected results!
 
 #. Start Postman
 #. Select **POST** as option
@@ -186,4 +190,7 @@ The following result should appear:
 
 .. image:: _static/install/APITestQueue.png
 
-.. image:: _static/install/APITestQueuePluginResult.png
+
+.. note:: For testing Queue use the Test Plugin and Check in C:\Programmdata for the testfile
+
+.. image:: _static/install/APITestQueuePluginResult1.png
