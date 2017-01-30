@@ -27,7 +27,7 @@ Install the .NET Core Windows Server Hosting bundle
 #. Restart the server or execute **net stop was /y** followed by **net start w3svc** from the command-line to pickup changes to the system PATH.
 
 .. important:: Make sure that module is available in IIS/Modules: 
-.. image:: _static/install/AspNetCoreModule.png.png
+.. image:: _static/install/AspNetCoreModule.png
 
 
 Database Server (SQL)
