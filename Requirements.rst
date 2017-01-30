@@ -26,8 +26,7 @@ Install the .NET Core Windows Server Hosting bundle
 #. Install the `.NET Core Windows Server Hosting <https://go.microsoft.com/fwlink/?LinkID=827547>`__ bundle on the server. The bundle will install the .NET Core Runtime, .NET Core Library, and the ASP.NET Core Module. The module creates the reverse-proxy between IIS and the Kestrel server.
 #. Restart the server or execute **net stop was /y** followed by **net start w3svc** from the command-line to pickup changes to the system PATH.
 
-.. important:: Make sure that module is available in IIS/Modules: 
-.. image:: _static/install/AspNetCoreModule.png
+.. important:: Make sure that module is available in IIS/Modules: .. image:: _static/install/AspNetCoreModule.png
 
 
 Database Server (SQL)
