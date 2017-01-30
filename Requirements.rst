@@ -40,7 +40,8 @@ Database Server (SQL)
   -	2014: https://www.microsoft.com/en-US/download/details.aspx?id=42299  
 
 .. important:: Make sure to download "ADV" package: 
-.. image:: _static/install/SQLServerDownload.png
+
+  .. image:: _static/install/SQLServerDownload.png
 
 Server Hardware Requirements (IIS+SQL)
 --------------------------------------------------------
