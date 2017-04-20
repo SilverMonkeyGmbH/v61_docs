@@ -41,7 +41,6 @@ Computers
 ************************************************************************************
 Everthing concering computer management is stored in the ``Computers`` namespace.
 
-
 ==============================
 Action WorkflowCreate
 ==============================
@@ -83,3 +82,37 @@ Example for RuleInclude:
 
 .. literalinclude:: _static/AddCollectionMembershipRuleInclude.ps1
   :language: powershell
+
+==============================
+AddResourceVariables
+==============================
+
+Adds variables to a specific computer system.
+
+Example:
+
+.. literalinclude:: _static/AddResourceVariables.ps1
+  :language: powershell
+
+
+==============================
+ComputerExists
+==============================
+
+==============================
+Create
+==============================
+
+
+==============================
+Delete
+==============================
+
+==============================
+DeleteVariables
+==============================
+
+
+
+
+
