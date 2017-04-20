@@ -62,3 +62,24 @@ Expected output:
 
 .. literalinclude:: _static/WorkflowCreate.log
 
+
+==============================
+AddCollectionMembership
+==============================
+
+Currently the following methods are supported by this action:
+
+- RuleDirectUser
+- RuleDirectComputer
+- RuleInclude
+
+Example for RuleDirectComputer:
+
+.. literalinclude:: _static/AddCollectionMembershipRuleDirectComputer.ps1
+  :language: powershell
+
+
+Example for RuleInclude:
+
+.. literalinclude:: _static/AddCollectionMembershipRuleInclude.ps1
+  :language: powershell
