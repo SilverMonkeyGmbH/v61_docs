@@ -94,6 +94,17 @@ Example:
   :language: powershell
 
 ==============================
+ClearPxeAdvertisementResource
+==============================
+
+Clears the PXE advertisements for a computer.
+
+Example:
+
+.. literalinclude:: _static/ClearPxeAdvertisementResource.ps1
+  :language: powershell
+
+==============================
 ComputerExists
 ==============================
 

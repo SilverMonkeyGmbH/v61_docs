@@ -1,0 +1,4 @@
+Result ByTwo: 0.5
++ Ok | My first script with error handling. | 21.04.2017 08:19:28
+++ Ok | Result of DevisionByTwo: 0.5 | 21.04.2017 08:19:28
+++ SystemException | Exception thrown: Attempted to divide by zero. | 21.04.2017 08:19:28
