@@ -1,4 +1,4 @@
-$Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\Base.dll")
+ $Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\Base.dll")
 
 $res = New-Object Base.Result("My first script with error handling.")
 
