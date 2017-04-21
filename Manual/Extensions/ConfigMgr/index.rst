@@ -104,7 +104,7 @@ Found computers can be deleted directly via secondary function parameter ``Delet
 
 Example:
 
-.. literalinclude:: _static/ComputerComputerExists.ps1
+.. literalinclude:: _static/ComputerExists.ps1
   :language: powershell
 
 ==============================
