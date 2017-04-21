@@ -1,10 +1,10 @@
-function SCCM-Migrate-ComputerToWin10()
+function MyResultFunction()
 {
 
     #EVEY CONSOLE OUTPUT IS PIPED TO $NULL
     $Null = @(
 
-        $res = New-Object Base.Result("Starting module SCCM\Migrate-ComputerToWin10...")
+        $res = New-Object Base.Result("Starting module X...")
 
         #HERE YOUR FUNCTION CONTENT
 
@@ -15,3 +15,8 @@ function SCCM-Migrate-ComputerToWin10()
     return , $res
 
 }
+
+
+[Base.Result]$res = MyResultFunction
+
+$res.Dump()
