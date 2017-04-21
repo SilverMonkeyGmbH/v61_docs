@@ -54,12 +54,12 @@ This worklow combines the following actions:
 
 Example (complete with connection):
 
-.. literalinclude:: _static/WorkflowCreate.ps1
+.. literalinclude:: _static/ComputerWorkflowCreate.ps1
   :language: powershell
 
 Expected output:
 
-.. literalinclude:: _static/WorkflowCreate.log
+.. literalinclude:: _static/ComputerWorkflowCreate.log
 
 
 ==============================
@@ -74,13 +74,13 @@ Currently the following methods are supported by this action:
 
 Example for RuleDirectComputer:
 
-.. literalinclude:: _static/AddCollectionMembershipRuleDirectComputer.ps1
+.. literalinclude:: _static/ComputerAddCollectionMembershipRuleDirectComputer.ps1
   :language: powershell
 
 
 Example for RuleInclude:
 
-.. literalinclude:: _static/AddCollectionMembershipRuleInclude.ps1
+.. literalinclude:: _static/ComputerAddCollectionMembershipRuleInclude.ps1
   :language: powershell
 
 ==============================
@@ -91,28 +91,56 @@ Adds variables to a specific computer system.
 
 Example:
 
-.. literalinclude:: _static/AddResourceVariables.ps1
+.. literalinclude:: _static/ComputerAddResourceVariables.ps1
   :language: powershell
-
 
 ==============================
 ComputerExists
 ==============================
 
+Checks wether a computer exists (by Name, MAC or SMBIOSGUID).
+
+Found computers can be deleted directly via secondary function parameter ``DeleteSystem``.
+
+Example:
+
+.. literalinclude:: _static/ComputerComputerExists.ps1
+  :language: powershell
+
 ==============================
 Create
 ==============================
 
+Creates a computer.
+
+Example:
+
+.. literalinclude:: _static/ComputerCreate.ps1
+  :language: powershell
 
 ==============================
 Delete
 ==============================
 
+Deletes a computer. Can only be deleted with ResourceId. 
+
+If deleting via Computername, MAC or SMBIOSGUID is needed, use ``ComputerExists`` function.
+
+Example:
+
+.. literalinclude:: _static/ComputerDelete.ps1
+  :language: powershell
+
 ==============================
 DeleteVariables
 ==============================
 
+Deletes the variables on the corresponding system.
 
+Example:
+
+.. literalinclude:: _static/ComputerDeleteVariables.ps1
+  :language: powershell
 
 
 
