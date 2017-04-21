@@ -6,33 +6,32 @@ Manual for plugin "ConfigMgr"
   :depth: 3
 
 
-.. warning:: This article is under construction! Please DO NOT use any of the instructions below, yet! You may cause damage to your system. This article will be finished soon.
-
 General assumptions:
 
 #. Actions with ``Workflow`` prefix combine multiple actions. Workflow actions exist to standardize frequent used action combos.
-#. Every action
+#. Every action returns ``Base.Result``. For more info go to Base.Result article.
+#. Most of the functions accept parameters via a specific parameter class
 
 ************************************************************************************
 Connection
 ************************************************************************************
-In the computers namespace all connection relevant parameters are stored.
+In the Connection namespace all connection relevant parameters are stored.
 
 Authentication Methods (or integrated authentication)
 
-a) Windows Auth: Do not set the corresponding credentials attributes *UserName, *UserPassword.
+a) Windows Auth: Do not set the corresponding credentials attributes ``UserName``, ``UserPassword``.
 
 Example:
 
-  .. literalinclude:: _static/ConnectionWinAuth.ps1
-    :language: powershell
+.. literalinclude:: _static/ConnectionWinAuth.ps1
+  :language: powershell
 
-b) Clear text: Set the corresponding credentials attributes *UserName, *UserPassword.
+b) Clear text: Set the corresponding credentials attributes ``UserName``, ``UserPassword``.
 
 Example:
 
-  .. literalinclude:: _static/ConnectionClearText.ps1
-    :language: powershell
+.. literalinclude:: _static/ConnectionClearText.ps1
+  :language: powershell
 
 c) Powershell Secure String: Will be supported in a later version.
 
@@ -99,7 +98,6 @@ ComputerExists
 ==============================
 
 Checks wether a computer exists (by Name, MAC or SMBIOSGUID).
-
 Found computers can be deleted directly via secondary function parameter ``DeleteSystem``.
 
 Example:
@@ -123,7 +121,6 @@ Delete
 ==============================
 
 Deletes a computer. Can only be deleted with ResourceId. 
-
 If deleting via Computername, MAC or SMBIOSGUID is needed, use ``ComputerExists`` function.
 
 Example:
