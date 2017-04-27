@@ -49,7 +49,7 @@ Check the next example:
 .. literalinclude:: _static/ResolveNameV6SampleScript.ps1
   :language: powershell
 
-  Error handling:
+Error handling:
 
-  #. If braces do not match on the input text, a FormatException will be thrown.
-  #. If a key value is not found among the columns returned by the query, or no entries are returned, an ApplicationException will be thrown.
+#. If braces do not match on the input text, a FormatException will be thrown.
+#. If a key value is not found among the columns returned by the query, or no entries are returned, an ApplicationException will be thrown.
