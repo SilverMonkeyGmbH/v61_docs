@@ -10,4 +10,5 @@ Contents:
 
    ConfigMgr/index
    Base/index
+   Tools/index
    
