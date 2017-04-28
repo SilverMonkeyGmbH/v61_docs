@@ -150,5 +150,15 @@ Example:
 .. literalinclude:: _static/ComputerDeleteVariables.ps1
   :language: powershell
 
+==============================
+PrimaryUserAdd
+==============================
+
+Add a user to a computer as a PrimaryUser reference.
+
+Example:
+
+.. literalinclude:: _static/PrimaryUserAdd.ps1
+  :language: powershell
 
 
