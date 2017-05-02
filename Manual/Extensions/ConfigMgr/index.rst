@@ -101,7 +101,7 @@ Clears the PXE advertisements for a computer.
 
 Example:
 
-.. literalinclude:: _static/ClearPxeAdvertisementResource.ps1
+.. literalinclude:: _static/ComputerClearPxeAdvertisementResource.ps1
   :language: powershell
 
 ==============================
