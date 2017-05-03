@@ -78,9 +78,18 @@ Query
 
 Getting information from the web service.
 
--- Information will be handed in later --
+To get data from the web service, simply the web service has the be called by GET with an URL like the following:
+http://simsrv009/SIM_v61_API_R001/api/query?uniquename=TestQuery
 
+As a result, the configured query ``TestQuery`` is executed within the web service and is returned as a JSON array:
 
+.. image:: _static/APITestQueue.png
 
+To create queries, the table ``[QueryLib]`` has to be extended by a new entry:
 
+.. literalinclude:: _static/CreateNewQueryLibEntry.sql
+  :language: sql
 
+the query will be available by the supplied ``[UniqueName]`` value:
+
+.. image:: _static/QueryLibConcept.png
