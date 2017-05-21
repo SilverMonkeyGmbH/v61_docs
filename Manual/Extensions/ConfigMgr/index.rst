@@ -61,6 +61,20 @@ Expected output:
 .. literalinclude:: _static/ComputerWorkflowCreate.log
 
 
+=====================================
+Example "reseting" existing computer
+=====================================
+This example shows how to
+
+#. Check whether a computer is found by Hostname
+#. Delete every direct collection membership
+#. Reset cmputer variables
+#. Add new variables
+#. Reset PXE flags
+#. Add to specific collection
+
+.. literalinclude:: _static/Example_ResetingExistingComputer.ps1
+  :language: powershell
 
 
 
