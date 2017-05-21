@@ -61,26 +61,8 @@ Expected output:
 .. literalinclude:: _static/ComputerWorkflowCreate.log
 
 
-==============================
-AddCollectionMembership
-==============================
-
-Currently the following methods are supported by this action:
-
-- RuleDirectUser
-- RuleDirectComputer
-- RuleInclude
-
-Example for RuleDirectComputer:
-
-.. literalinclude:: _static/ComputerAddCollectionMembershipRuleDirectComputer.ps1
-  :language: powershell
 
 
-Example for RuleInclude:
-
-.. literalinclude:: _static/ComputerAddCollectionMembershipRuleInclude.ps1
-  :language: powershell
 
 ==============================
 AddResourceVariables
@@ -102,6 +84,41 @@ Clears the PXE advertisements for a computer.
 Example:
 
 .. literalinclude:: _static/ComputerClearPxeAdvertisementResource.ps1
+  :language: powershell
+
+==============================
+CollectionMembershipAdd
+==============================
+
+Currently the following methods are supported by this action:
+
+- RuleDirectUser
+- RuleDirectComputer
+- RuleInclude
+
+Example for RuleDirectComputer:
+
+.. literalinclude:: _static/ComputerCollectionMembershipAddRuleDirectComputer.ps1
+  :language: powershell
+
+
+Example for RuleInclude:
+
+.. literalinclude:: _static/ComputerCollectionMembershipAddRuleInclude.ps1
+  :language: powershell
+
+==============================
+CollectionMembershipRemove
+==============================
+
+Currently the following methods are supported by this action:
+
+- RuleDirectUser
+- RuleDirectComputer
+
+Example for RuleDirectComputer:
+
+.. literalinclude:: _static/ComputerCollectionMembershipRemove.ps1
   :language: powershell
 
 ==============================

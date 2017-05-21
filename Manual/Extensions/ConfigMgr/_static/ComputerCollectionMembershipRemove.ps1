@@ -17,15 +17,14 @@ if ($res.Successful -eq $true)
 {
 
     $ConfigMgrComputersObject = New-Object SIM.ConfigMgr.Computers.Computer($ConfigMgrConnection)
-
     $objParametersCollectionMembership = New-Object SIM.ConfigMgr.ParametersCollectionMembership;
 
     $objParametersCollectionMembership.CollectionMembershipType = [SIM.ConfigMgr.ParametersCollectionMembership+CollectionMembershipTypes]::RuleDirectComputer;
-    $objParametersCollectionMembership.CollectionName = "ParentColl";
-    $objParametersCollectionMembership.ResourceName = "TestComputer478";
+    $objParametersCollectionMembership.CollectionId = "SIM00017"
+    $objParametersCollectionMembership.ResourceId = "16777228"
 
-    $res.ChildAdd($ConfigMgrComputersObject.AddCollectionMembership($objParametersCollectionMembership));
+    $res.ChildAdd($ConfigMgrComputersObject.CollectionMembershipRemove($objParametersCollectionMembership));
+   
 }
 
 $res.Dump()
-

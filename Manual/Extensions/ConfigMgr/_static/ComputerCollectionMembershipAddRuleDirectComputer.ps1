@@ -20,11 +20,11 @@ if ($res.Successful -eq $true)
 
     $objParametersCollectionMembership = New-Object SIM.ConfigMgr.ParametersCollectionMembership;
 
-    $objParametersCollectionMembership.CollectionMembershipType = [SIM.ConfigMgr.ParametersCollectionMembership+CollectionMembershipTypes]::RuleInclude;
+    $objParametersCollectionMembership.CollectionMembershipType = [SIM.ConfigMgr.ParametersCollectionMembership+CollectionMembershipTypes]::RuleDirectComputer;
     $objParametersCollectionMembership.CollectionName = "ParentColl";
-    $objParametersCollectionMembership.ResourceName = "ChildColl";
+    $objParametersCollectionMembership.ResourceName = "TestComputer478";
 
-    $res.ChildAdd($ConfigMgrComputersObject.AddCollectionMembership($objParametersCollectionMembership));
+    $res.ChildAdd($ConfigMgrComputersObject.CollectionMembershipAdd($objParametersCollectionMembership));
 }
 
 $res.Dump()
