@@ -121,6 +121,20 @@ Example for RuleInclude:
 .. literalinclude:: _static/ComputerCollectionMembershipAddRuleInclude.ps1
   :language: powershell
 
+========================================
+CollectionMembershipRequestRefresh
+========================================
+
+Requests a refresh of the effective collection memberships. The request will be performed after the corresponding resource was found in the limiting collection.
+
+Definition:
+
+.. literalinclude:: _static/CollectionMembershipRequestRefresh_Definition.cs
+
+Example:
+
+.. literalinclude:: _static/CollectionMembershipRequestRefresh_Example.ps1
+
 ==============================
 CollectionMembershipRemove
 ==============================
@@ -134,6 +148,8 @@ Example for RuleDirectComputer:
 
 .. literalinclude:: _static/ComputerCollectionMembershipRemove.ps1
   :language: powershell
+
+  
 
 ==============================
 ComputerExists

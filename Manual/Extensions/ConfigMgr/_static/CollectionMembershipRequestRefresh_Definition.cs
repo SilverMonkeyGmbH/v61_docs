@@ -1,0 +1,1 @@
+  Base.Result CollectionMembershipRequestRefresh(ParametersCollectionMembership objParams, int RetriesMax = 45, int RetryWaitMilisec = 20000, int SleepAfterFound = 60000) 
