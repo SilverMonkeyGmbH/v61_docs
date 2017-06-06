@@ -130,10 +130,12 @@ Requests a refresh of the effective collection memberships. The request will be 
 Definition:
 
 .. literalinclude:: _static/CollectionMembershipRequestRefresh_Definition.cs
+  :language: csharp
 
 Example:
 
 .. literalinclude:: _static/CollectionMembershipRequestRefresh_Example.ps1
+  :language: powershell
 
 ==============================
 CollectionMembershipRemove
