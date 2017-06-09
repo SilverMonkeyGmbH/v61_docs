@@ -100,6 +100,19 @@ Example:
 .. literalinclude:: _static/ComputerClearPxeAdvertisementResource.ps1
   :language: powershell
 
+
+==============================
+CollectionCreate
+==============================
+
+Create a collection.
+
+Example:
+
+.. literalinclude:: _static/CollectionCreate.ps1
+  :language: powershell
+
+
 ==============================
 CollectionMembershipAdd
 ==============================
