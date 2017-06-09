@@ -89,6 +89,19 @@ Example:
 .. literalinclude:: _static/ComputerAddResourceVariables.ps1
   :language: powershell
 
+
+
+==============================
+AssignmentCreate
+==============================
+
+Create an application assignment for users or computers
+
+Example:
+
+.. literalinclude:: _static/AssignmentCreate.ps1
+  :language: powershell
+
 ==============================
 ClearPxeAdvertisementResource
 ==============================
