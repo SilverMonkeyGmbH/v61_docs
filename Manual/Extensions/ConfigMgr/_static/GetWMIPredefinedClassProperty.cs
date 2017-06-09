@@ -1,0 +1,1 @@
+public Base.Result GetWMIPredefinedClassProperty(ConfigMgrQueries Query, string FindValue, string FindValue2 = "")

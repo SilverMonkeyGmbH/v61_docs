@@ -36,30 +36,15 @@ Example:
 c) Powershell Secure String: Will be supported in a later version.
 
 ************************************************************************************
-Computers
+Examples
 ************************************************************************************
-Everthing concering computer management is stored in the ``Computers`` namespace.
 
-==============================
-Action WorkflowCreate
-==============================
+======================================================
+Create collection, assign app, create membership
+======================================================
 
-This worklow combines the following actions:
-
-#. Check if computer exists (Delete if ``ComputerParameters.ComputerOverwriteExistingObject`` is true)
-#. Create computer
-#. Add variables to computer object
-#. Add collection memberships to computer
-
-Example (complete with connection):
-
-.. literalinclude:: _static/ComputerWorkflowCreate.ps1
+.. literalinclude:: _static/Example_CreateCollectionAssignApp.ps1
   :language: powershell
-
-Expected output:
-
-.. literalinclude:: _static/ComputerWorkflowCreate.log
-
 
 =====================================
 Example "reseting" existing computer
@@ -75,6 +60,45 @@ This example shows how to
 
 .. literalinclude:: _static/Example_ResetingExistingComputer.ps1
   :language: powershell
+
+************************************************************************************
+Generic
+************************************************************************************
+
+==============================
+GetWMIPredefinedClassProperty
+==============================
+
+Get for predefined WMI classes specific properties. Thise queries can either be used to lookup data or to determine of the object exists.
+
+Definition:
+
+.. literalinclude:: _static/GetWMIPredefinedClassProperty.cs
+  :language: csharp
+
+a) Get data
+
+Example:
+
+.. literalinclude:: _static/GetWMIPredefinedClassPropertyGetData.ps1
+  :language: powershell
+
+b) Check if object exists.
+
+Example:
+
+.. literalinclude:: _static/GetWMIPredefinedClassPropertyObjectExists.ps1
+  :language: powershell
+
+
+************************************************************************************
+Computers
+************************************************************************************
+Everthing concering computer management is stored in the ``Computers`` namespace.
+
+
+
+
 
 
 
@@ -95,7 +119,7 @@ Example:
 AssignmentCreate
 ==============================
 
-Create an application assignment for users or computers
+Creates an application assignment for users or computers
 
 Example:
 
@@ -237,3 +261,22 @@ Example:
   :language: powershell
 
 
+==============================
+WorkflowCreate
+==============================
+
+This worklow combines the following actions:
+
+#. Check if computer exists (Delete if ``ComputerParameters.ComputerOverwriteExistingObject`` is true)
+#. Create computer
+#. Add variables to computer object
+#. Add collection memberships to computer
+
+Example (complete with connection):
+
+.. literalinclude:: _static/ComputerWorkflowCreate.ps1
+  :language: powershell
+
+Expected output:
+
+.. literalinclude:: _static/ComputerWorkflowCreate.log
