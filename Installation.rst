@@ -150,6 +150,10 @@ Install Windows Service
 
 .. image:: _static/install/SimWinService_02.png
 
+5. To optimize failure tollerance, please configure "Recovery" tab like the following:
+
+.. image:: _static/install/SIMWinServiceRecoveryConfig.PNG
+
 
 Test Installation
 ----------------------------------------
