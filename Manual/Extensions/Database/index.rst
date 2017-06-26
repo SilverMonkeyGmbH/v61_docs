@@ -7,9 +7,9 @@ Manual for library "Database"
 
 
 ************************************************************************************
-SIMv61Database.SIMv61Database
+SIM.Tools.Database
 ************************************************************************************
-The SIMv61Database.SIMv61Database class is used easily handle database actions to MSSQL servers. 
+The SIM.Tools.Database class is used easily handle database actions to MSSQL servers. 
 
 Example with ConfigMgr:
 
