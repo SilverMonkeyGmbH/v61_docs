@@ -1,12 +1,7 @@
 $Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\Base.dll")
-$Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\EntityFramework.dll")
-$Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\EntityFramework.SqlServer.dll")
-$Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\System.Data.Common.dll")
 $Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\System.Data.SqlClient.dll")
-$Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\SIMv61Database.dll")
+$Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\Database.dll")
 $Assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\ConfigMgr.dll")
-
-$ctx = New-Object SIMv61Database.SIMv61Database("")
 
 $ConfigMgrConnectionSettings = New-Object SIM.ConfigMgr.ConnectionSettings
 $ConfigMgrConnectionSettings.WMIHostName = 'localhost'
@@ -22,15 +17,25 @@ $res.ChildAdd($ConfigMgrConnection.Connect())
 if ($res.Successful -eq $true)
             
 {
+    
+    # **************************************
+    # Create new instance of Database with 
+    # (A) an existing SQLConnection object
+    # (B) with a path to the SIMV61 Config file: $SIM_DB = New-Object SIM.Tools.Database("C:\SilverMonkey\v61\Config.xml")  
+    # **************************************
+    $SIM_DB = New-Object SIM.Tools.Database($ConfigMgrConnection.SQLConnection)    
 
+    
     # **************************************
     # EXAMPLE with single row return:
-    $row = $ctx.SQLQueryFirstRow("SELECT * FROM [v_CollectionRuleDirect] WHERE [ResourceType] = 5", $ConfigMgrConnection.SQLConnection)
+    # **************************************
+    $row = $SIM_DB.SQLQueryFirstRow("SELECT * FROM [v_CollectionRuleDirect] WHERE [ResourceType] = 5")
     $row['RuleName']
 
     # **************************************
     # EXAMPLE with multiple rows (in a table) return:
-    $table = $ctx.SQLQueryAll("SELECT * FROM [v_CollectionRuleDirect] WHERE [ResourceType] = 5", $ConfigMgrConnection.SQLConnection)
+    # **************************************
+    $table = $SIM_DB.SQLQueryAll("SELECT * FROM [v_CollectionRuleDirect] WHERE [ResourceType] = 5")
 
     if ($table.Rows.Count -gt 0)
     {
@@ -42,7 +47,8 @@ if ($res.Successful -eq $true)
 
     # **************************************
     # EXAMPLE to fire a command:
-    $intReturn = $ctx.SQLCommand("use testdb;  create table testtable(bla varchar(10));", $ConfigMgrConnection.SQLConnection)
+    # **************************************
+    $intReturn = $SIM_DB.SQLCommand("use testdb;  create table testtable(bla varchar(10));")
 
     "Affected items: $intReturn"
 
