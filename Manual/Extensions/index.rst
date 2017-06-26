@@ -10,5 +10,6 @@ Contents:
 
    ConfigMgr/index
    Base/index
+   Database/index
    Tools/index
    
