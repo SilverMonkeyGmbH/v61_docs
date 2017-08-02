@@ -22,6 +22,7 @@ if ($res.Successful -eq $true)
     # Create new instance of Database with 
     # (A) an existing SQLConnection object
     # (B) with a path to the SIMV61 Config file: $SIM_DB = New-Object SIM.Tools.Database("C:\SilverMonkey\v61\Config.xml")  
+    # (C) with a connection string: $SIM_DB = New-Object SIM.Tools.Database("data source = server1,1433; initial catalog = DB1; integrated security = True; MultipleActiveResultSets=True;App=EntityFramework", $true) 
     # **************************************
     $SIM_DB = New-Object SIM.Tools.Database($ConfigMgrConnection.SQLConnection)    
 
