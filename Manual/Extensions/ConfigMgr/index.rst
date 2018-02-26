@@ -280,3 +280,20 @@ Example (complete with connection):
 Expected output:
 
 .. literalinclude:: _static/ComputerWorkflowCreate.log
+
+************************************************************************************
+Applications
+************************************************************************************
+Everthing concering application management is stored in the ``Application`` namespace.
+
+
+==============================
+CreateApplication
+==============================
+
+Creates an Application with a XML definition provided.
+
+Example (complete with connection):
+
+.. literalinclude:: _static/CreateApplication.ps1
+  :language: powershell
