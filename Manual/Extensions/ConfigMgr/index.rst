@@ -113,7 +113,16 @@ Example:
 .. literalinclude:: _static/ComputerAddResourceVariables.ps1
   :language: powershell
 
+==============================
+AdvertisementCreate
+==============================
 
+Creates an package advertisement for a specific collection
+
+Example:
+
+.. literalinclude:: _static/AdvertisementCreate.ps1
+  :language: powershell
 
 ==============================
 AssignmentCreate
