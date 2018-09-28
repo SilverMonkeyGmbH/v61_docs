@@ -309,7 +309,7 @@ Example (complete with connection):
   
   
 ************************************************************************************
-Computers
+Security
 ************************************************************************************
 Everthing concering computer management is stored in the ``Computers`` namespace.
 
