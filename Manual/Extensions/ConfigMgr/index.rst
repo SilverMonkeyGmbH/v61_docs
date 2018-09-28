@@ -306,3 +306,38 @@ Example (complete with connection):
 
 .. literalinclude:: _static/CreateApplication.ps1
   :language: powershell
+  
+  
+************************************************************************************
+Computers
+************************************************************************************
+Everthing concering computer management is stored in the ``Computers`` namespace.
+
+
+
+==============================
+SecurityScopeAdd
+==============================
+
+Adds a existing security scope (by name) to a ConfigMgr object.
+
+Example (complete with connection):
+
+.. literalinclude:: _static/SecurityScope-Set-ToPkg.ps1
+  :language: powershell
+
+Possible values for ObjectTypeId:
+
+.. literalinclude:: _static/EnumObjectTypeID.cs
+  :language: csharp
+
+==============================
+SecurityScopeRemove
+==============================
+
+Removes a security scope (by name) from a ConfigMgr object.
+
+Example (complete with connection):
+
+.. literalinclude:: _static/SecurityScope-Remove-FromPkg.ps1
+  :language: powershell
